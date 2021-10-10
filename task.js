@@ -59,6 +59,7 @@ function customDrag() {
         .dataTransfer
         .setData('text/plain', event.target.id);
       draggable.classList.add('dragging')
+
     })
 
     draggable.addEventListener('dragend', () => {
@@ -86,6 +87,7 @@ function customDrag() {
   dropzones.forEach(dropzone => {
     dropzone.addEventListener('dragover', e => {
       e.preventDefault()
+
     })
     dropzone.addEventListener('drop', event => {
       const id = event
@@ -94,7 +96,7 @@ function customDrag() {
       const draggableElement = document.getElementById(id);
 
       const droparea = document.getElementById("right_options")
-      droparea.appendChild(draggableElement);
+      droparea.prepend(draggableElement);
       event.dataTransfer.clearData();
 
     })
@@ -147,10 +149,10 @@ function loadSelectedList() {
         })
       }
     });
-    const dropzoneId=document.getElementById("dropzone");
+    const dropzoneId = document.getElementById("dropzone");
     selectedoptions.length > 0 ?
-     (dropzoneId.style.height = "100px",dropzoneId.style.background="white",document.getElementsByClassName("dropicon")[0].style.display="none")
-      : (dropzoneId.style.height = "600px",dropzoneId.style.background="E5E5E5",document.getElementsByClassName("dropicon")[0].style.display="block");
+      (dropzoneId.style.height = "100px", dropzoneId.style.background = "white", document.getElementsByClassName("dropicon")[0].style.display = "none")
+      : (dropzoneId.style.height = "600px", dropzoneId.style.background = "E5E5E5", document.getElementsByClassName("dropicon")[0].style.display = "block");
   });
   observer.observe(list, config);
 }

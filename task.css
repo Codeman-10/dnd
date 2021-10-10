@@ -1,6 +1,5 @@
-body{
-  font-family: Georgia, serif;
-
+body {
+  font-family: "Karma";
 }
 .select_container {
   width: max-content;
@@ -8,7 +7,7 @@ body{
 }
 .left,
 .right {
-  width: 270px;
+  width: 290px;
 }
 .left_body {
   position: relative;
@@ -46,19 +45,20 @@ body{
   align-items: center;
   justify-content: center;
   height: 650px;
-  background-color: #E5E5E5
-  ;
+  background-color: #e5e5e5;
 }
 .optioncontainer {
   display: flex;
-    align-items: baseline;
-    margin-top: 15px;
+  align-items: baseline;
+  margin-top: 15px;
 
   justify-content: space-between;
 }
 
 #right_options {
   margin-top: 20px;
+  max-height: 400px;
+  overflow-y: scroll;
 }
 
 .optioncontainer > .deletebtn {
@@ -66,31 +66,34 @@ body{
 }
 .right_options .optioncontainer:hover .deletebtn {
   display: block;
+  margin-right: 8px;
 }
 .deletebtn:hover {
   cursor: pointer;
 }
-.optioncontainer{
-cursor:move
+.optioncontainer {
+  cursor: move;
 }
 
-.dragging .deletebtn{
-  display: none!important;
-
+.dragging .deletebtn {
+  display: none !important;
 }
-.nodata{
+.nodata {
   display: flex;
-  width:220px;
+  width: 220px;
   flex-direction: column;
   margin-top: 10px;
   align-items: center;
   justify-content: space-evenly;
 }
-.right_header{
+.right_header {
   text-align: end;
   font-weight: bolder;
+  margin-right: 10px;
 }
-.left_header{
+.left_header {
   font-weight: bolder;
-
+}
+.dragging {
+  cursor: grabbing;
 }
