@@ -1,0 +1,96 @@
+body{
+  font-family: Georgia, serif;
+
+}
+.select_container {
+  width: max-content;
+  display: flex;
+}
+.left,
+.right {
+  width: 270px;
+}
+.left_body {
+  position: relative;
+}
+.right_body {
+  padding: 0px 10px;
+}
+.optionbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 12px;
+  border: 2px solid grey;
+  border-radius: 5px;
+  width: 220px;
+  height: 40px;
+  box-sizing: border-box;
+}
+#left_searchbox {
+  border-radius: 5px;
+  padding: 6px 12px;
+  width: 220px;
+  padding-left: 30px;
+}
+#search_icon {
+  position: absolute;
+  left: 5px;
+  top: 7px;
+}
+#dropzone {
+  outline: dashed;
+  display: flex;
+  flex-direction: column;
+  outline-width: thin;
+  align-items: center;
+  justify-content: center;
+  height: 650px;
+  background-color: #E5E5E5
+  ;
+}
+.optioncontainer {
+  display: flex;
+    align-items: baseline;
+    margin-top: 15px;
+
+  justify-content: space-between;
+}
+
+#right_options {
+  margin-top: 20px;
+}
+
+.optioncontainer > .deletebtn {
+  display: none;
+}
+.right_options .optioncontainer:hover .deletebtn {
+  display: block;
+}
+.deletebtn:hover {
+  cursor: pointer;
+}
+.optioncontainer{
+cursor:move
+}
+
+.dragging .deletebtn{
+  display: none!important;
+
+}
+.nodata{
+  display: flex;
+  width:220px;
+  flex-direction: column;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.right_header{
+  text-align: end;
+  font-weight: bolder;
+}
+.left_header{
+  font-weight: bolder;
+
+}

@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Task</title>
+    <link rel="stylesheet" href="task.css" />
+    <script
+      src="https://kit.fontawesome.com/89a933307b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="task.js" defer></script>
+  </head>
+  <body>
+    <div class="select_container" id="select_container">
+      <div class="left">
+        <p class="left_header">Language List</p>
+        <div class="left_body" id="left_body">
+          <i class="fa fa-search" id="search_icon"></i>
+          <input
+            type="text"
+            placeholder="Search Language "
+            id="left_searchbox"
+            onkeyup="createOptions()"
+          />
+          <div class="left_options" id="leftoption"></div>
+        </div>
+      </div>
+      <div class="right">
+        <p class="right_header">Selected List</p>
+        <div class="right_body">
+          <div id="dropzone">
+            <p>Drag & Drop Language here</p>
+            <i class="far fa-copy fa-7x dropicon"></i>
+          </div>
+          <div id="right_options" class="right_options"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
