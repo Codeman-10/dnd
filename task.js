@@ -105,7 +105,7 @@ function customDrag() {
 
     container.addEventListener('drop', e => {
       const draggable = document.querySelector('.dragging')
-      const afterElement = getDragAfterElement(container, e.clientY)
+      const afterElement = getClosestElement(container, e.clientY)
       if (afterElement == null) {
         container.appendChild(draggable)
       }
@@ -131,12 +131,12 @@ function customDrag() {
     })
   })
 
-  function getDragAfterElement(container, y) {
+  function getClosestElement(container, y) {
     const draggableElements = [...container.querySelectorAll('.draggable:not(.dragging)')]
 
     return draggableElements.reduce((closest, child) => {
-      const box = child.getBoundingClientRect()
-      const offset = y - box.top - box.height / 2
+      const childcontainer = child.getBoundingClientRect()
+      const offset = y - childcontainer.top - childcontainer.height / 2
       if (offset < 0 && offset > closest.offset) {
         return { offset: offset, element: child }
       } else {
