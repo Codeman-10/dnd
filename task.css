@@ -6,7 +6,8 @@ body {
   display: flex;
   margin-left: 20px;
 }
-.left, .right {
+.left,
+.right {
   width: 290px;
 }
 .right_header {

@@ -16,7 +16,6 @@ function createOptions() {
   name.innerHTML = "";
 
   if (searchOption === "" || searchOption === undefined) {
-
     options.sort().forEach(function (value, i) {
       optionBox(value, i);
     });
