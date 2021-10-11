@@ -4,6 +4,7 @@ body {
 .select_container {
   width: max-content;
   display: flex;
+  margin-left: 20px;
 }
 .left, .right {
   width: 290px;
@@ -95,4 +96,7 @@ body {
   margin-top: 10px;
   align-items: center;
   justify-content: space-evenly;
+}
+.dragging{
+  cursor: grabbing !important;
 }
